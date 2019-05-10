@@ -50,6 +50,7 @@ int main() {
     Arena arena(fights);
     arena.run_all();
 
+    //// Assert
     assert(bruce_lee->attack() == 16);
     assert(bruce_lee->defense() == 9);
 
@@ -59,7 +60,25 @@ int main() {
     assert(jason_statham->attack() == 11);
     assert(jason_statham->defense() == 5);
 
+    assert(arena.get_fights()[0] == fights[0]);
+    assert(arena.get_fights()[1] == fights[1]);
 
+    assert(Elude().defense() == 1);
+    assert(Shield().defense() == 4);
+    assert(Armor().defense() == 8);
+
+    assert(Punch().attack() == 1);
+    assert(Saber().attack() == 5);
+    assert(Firearm().attack() == 10);
+
+    assert(Defense(8).defense() == 8);
+    assert(Attack(15).attack() == 15);
+
+    assert(BLvsCN.fighter1 == bruce_lee);
+    assert(BLvsCN.fighter2 == chuck_norris);
+
+    assert(JSvsCN.fighter1 == jason_statham);
+    assert(JSvsCN.fighter2 == chuck_norris);
 
     delete bruce_lee;
     delete chuck_norris;

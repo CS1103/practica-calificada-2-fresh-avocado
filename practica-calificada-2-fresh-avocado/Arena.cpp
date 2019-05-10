@@ -8,11 +8,6 @@
 void Arena::run(Fighter* fighter1, Fighter* fighter2) {
     Fight fight(fighter1, fighter2);
 
-    /*
-     (𝑠𝑐𝑜𝑟𝑒 𝑝𝑒𝑙𝑒𝑎𝑑𝑜𝑟 1) = ∑(𝑑𝑒𝑓𝑒𝑛𝑠𝑎 𝑝𝑒𝑙𝑒𝑎𝑑𝑜𝑟 1) − ∑(𝑎𝑡𝑎𝑞𝑢𝑒 𝑝𝑒𝑙𝑒𝑎𝑑𝑜𝑟 2)
-     (𝑠𝑐𝑜𝑟𝑒 𝑝𝑒𝑙𝑒𝑎𝑑𝑜𝑟 2) = ∑(𝑑𝑒𝑓𝑒𝑛𝑠𝑎 𝑝𝑒𝑙𝑒𝑎𝑑𝑜𝑟 2) − ∑(𝑎𝑡𝑎𝑞𝑢𝑒𝑝𝑒𝑙𝑒𝑎𝑑𝑜𝑟 1)
-     */
-
     cout << "Pelea entre " << fighter1->get_name() << " y " << fighter2->get_name() << "..." << endl;
 
     fight.fighter1_score = fighter1->defense() - fighter2->attack();
